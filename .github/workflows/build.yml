@@ -17,10 +17,9 @@ jobs:
       - uses: docker/build-push-action@v6.19.2
         with:
           push: true
-          # tags: ghcr.io/${{ github.repository }} this should work but my username is all caps so i had to manually change it to lowercase
           tags: ghcr.io/warhe8d/codespaces-react
           build-args: |
-            NPM_TOKEN= ${{ secrets.NODE_AUTH_TOKEN }}
+            NPM_TOKEN=${{ secrets.NODE_AUTH_TOKEN }}
           
           
     
